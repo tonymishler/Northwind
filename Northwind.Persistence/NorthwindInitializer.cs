@@ -20,7 +20,7 @@ namespace Northwind.Persistence
             initializer.SeedEverything(context);
         }
 
-        public void SeedEverything(NorthwindDbContext context)
+        private void SeedEverything(NorthwindDbContext context)
         {
             context.Database.EnsureCreated();
 
@@ -48,7 +48,7 @@ namespace Northwind.Persistence
             SeedOrders(context);
         }
 
-        public void SeedCustomers(NorthwindDbContext context)
+        private void SeedCustomers(NorthwindDbContext context)
         {
             var customers = new[]
             {
